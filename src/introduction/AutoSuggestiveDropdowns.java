@@ -15,7 +15,7 @@ public class AutoSuggestiveDropdowns {
 		String url = "https://rahulshettyacademy.com/dropdownsPractise/";
 		driver.get(url);
 		WebElement autoSuggestField = driver.findElement(By.xpath("//input[@placeholder='Type to Select']")); // locates the autosuggestive field
-		autoSuggestField.sendKeys("in");
+		autoSuggestField.sendKeys("me");
 		Thread.sleep(3000);
 		List<WebElement> suggestions = driver.findElements(By.cssSelector("li[class='ui-menu-item'] a")); // this css
 																											// selector
@@ -41,7 +41,7 @@ public class AutoSuggestiveDropdowns {
 		
 		//enhanced for loop
 		for(WebElement suggestion : suggestions) {
-			if(suggestion.getText().equals("United Kingdom (UK)")) {
+			if(suggestion.getText().equals("Mexico")) {
 				suggestion.click();
 				break;
 			}
