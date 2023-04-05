@@ -17,9 +17,8 @@ public class StaticDropdown {
 		String url = "https://rahulshettyacademy.com/dropdownsPractise/";
 		driver.get(url);
 
-		
-		
-		// dropdown with select tag the class Select only works if the dropdown tag is <select>
+		// dropdown with select tag the class Select only works if the dropdown tag is
+		// <select>
 		// create an object of the Select class and as parameter insert the web element
 		// with the dropdown
 		WebElement sDropDown = driver.findElement(By.id("ctl00_mainContent_DropDownListCurrency")); // static dropdown
@@ -44,8 +43,8 @@ public class StaticDropdown {
 		System.out.println(option1); // Prints the text of option1
 		System.out.println(option2);// Prints the text of option2
 		System.out.println(option3);// Prints the text of option3
-		
-		//Note there are additional methods on the Select class 
+
+		// Note there are additional methods on the Select class
 
 	}
 

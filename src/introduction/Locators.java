@@ -8,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
-
 public class Locators {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -43,7 +42,7 @@ public class Locators {
 		 * childtagname input[type*='pass'] – CSS tagname
 		 * 
 		 */
-		
+
 		WebElement forgotPassword = driver.findElement(By.linkText("Forgot your password?")); // find element by
 																								// linkText (make sure
 																								// element is tag "a"
@@ -89,25 +88,22 @@ public class Locators {
 		WebElement resetLoginButton = driver.findElement(By.cssSelector("button[class='reset-pwd-btn']"));
 		resetLoginButton.click();
 
-		String message = driver.findElement(By.cssSelector("form p")).getText(); // 
+		String message = driver.findElement(By.cssSelector("form p")).getText(); //
 
-		 //splitting the text by the "'" sign
+		// splitting the text by the "'" sign
 		String[] list = message.split("'");
 		message = list[1]; // assigning only the password to the message
-		
+
 		WebElement goToLogInButton = driver.findElement(By.cssSelector("button[class='go-to-login-btn']"));
 		goToLogInButton.click();
-		
+
 		usernameField.sendKeys("Jairo");
 		pwdField.sendKeys(message);
-		
+
 		Thread.sleep(1000);
 		signInButton.click();
 		driver.close();
-		
 
 	}
-	
-	
 
 }

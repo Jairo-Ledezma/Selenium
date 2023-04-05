@@ -9,41 +9,34 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class MiscelleanousAndSS {
+public class EntirePageScreenShotsAndMiscelleanous {
 
 	public static void main(String[] args) throws IOException {
 
-
-		System.setProperty("Webdriver.chrome.driver","C:\\Users\\jairo\\Desktop\\WebDrivers\\chromedriver.exe");
+		System.setProperty("Webdriver.chrome.driver", "C:\\Users\\jairo\\Desktop\\WebDrivers\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
-		
-		//Minimizing Window
+
+		// Minimizing Window
 		driver.manage().window().minimize();
-		
-		//Maximizing window
-		
+
+		// Maximizing window
+
 		driver.manage().window().maximize();
-		
+
 		// Deleting cookies
-		
+
 		driver.manage().deleteAllCookies();
-		
-		//Deleting some cookies by name 
-		//driver.manage().deleteCookieNamed("add cookie name here");
-		
-		
+
+		// Deleting some cookies by name
+		// driver.manage().deleteCookieNamed("add cookie name here");
+
 		// taking screenshots
 		driver.get("https://www.google.com");
-		
-		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		
-		FileUtils.copyFile(src, new File("C:\\Users\\jairo\\Desktop\\new selenium\\Selenium\\Screenshots\\SSMiscelleanousClass.png"));
-		
-		
-		
-		
-		
-		
+
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+		FileUtils.copyFile(src,
+				new File("C:\\Users\\jairo\\Desktop\\new selenium\\Selenium\\Screenshots\\SSMiscelleanousClass.png"));
 
 	}
 

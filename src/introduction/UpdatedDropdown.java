@@ -20,8 +20,7 @@ public class UpdatedDropdown {
 		WebElement plusChildBtn = driver.findElement(By.id("hrefIncChd"));
 		WebElement plusInfantBtn = driver.findElement(By.id("hrefIncInf"));
 		WebElement doneBtn = driver.findElement(By.id("btnclosepaxoption"));
-		
-		
+
 		for (int i = 1; i <= 3; i++) {
 
 			plusAdultBtn.click();

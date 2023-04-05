@@ -19,14 +19,15 @@ public class DinamycDropdowns {
 
 		// one way with indexed xpaths
 
-		//WebElement departureCity = driver.findElement(By.xpath("//a[@value='BLR']"));
-		//departureCity.click();
-		//Thread.sleep(1000);
-		//WebElement destCity = driver.findElement(By.xpath("(//a[@value='MAA'])[2]"));
-		//destCity.click();
+		// WebElement departureCity = driver.findElement(By.xpath("//a[@value='BLR']"));
+		// departureCity.click();
+		// Thread.sleep(1000);
+		// WebElement destCity = driver.findElement(By.xpath("(//a[@value='MAA'])[2]"));
+		// destCity.click();
 
 		// anther way using parent child xpath locator
-		WebElement departureCity = driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_originStation1_CTNR'] //a[@value='BLR']")); 
+		WebElement departureCity = driver
+				.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_originStation1_CTNR'] //a[@value='BLR']"));
 		// this
 		// xpath
 		// contains
@@ -58,10 +59,11 @@ public class DinamycDropdowns {
 		// the
 		// parent
 		// xpath
-																														
+
 		departureCity.click();
 		Thread.sleep(1000);
-		WebElement destCity = driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']"));
+		WebElement destCity = driver.findElement(
+				By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']"));
 		destCity.click();
 
 	}

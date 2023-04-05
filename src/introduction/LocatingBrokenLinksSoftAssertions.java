@@ -35,7 +35,7 @@ public class LocatingBrokenLinksSoftAssertions {
 			conn.connect();
 			int responseCode = conn.getResponseCode();
 			System.out.println(urlLink + " returned a " + responseCode);
-			a.assertTrue(responseCode<400, "The link with Text " + text + " is broken with code " + responseCode);
+			a.assertTrue(responseCode < 400, "The link with Text " + text + " is broken with code " + responseCode);
 
 		}
 		a.assertAll();

@@ -25,16 +25,17 @@ public class Locators2 {
 		signInButton.click();
 		Thread.sleep(2000);
 		String loginMessage = driver.findElement(By.tagName("p")).getText();
-		Assert.assertEquals(loginMessage, "You are successfully logged in."); // Assert comes from testng library dependency
+		Assert.assertEquals(loginMessage, "You are successfully logged in."); // Assert comes from testng library
+																				// dependency
 		String greeting = driver.findElement(By.cssSelector("div[class='login-container'] h2")).getText();
-		Assert.assertEquals(greeting, "Hello " + name +",");// Assert comes from testng library dependency
-		WebElement logOutButton= driver.findElement(By.xpath("//button[text()='Log Out']")); // xpath found by text of the button 
+		Assert.assertEquals(greeting, "Hello " + name + ",");// Assert comes from testng library dependency
+		WebElement logOutButton = driver.findElement(By.xpath("//button[text()='Log Out']")); // xpath found by text of
+																								// the button
 		logOutButton.click();
 		driver.close();
-		
 
 	}
-	
+
 	public static String getPassword(WebDriver driver) throws InterruptedException {
 		driver.get("https://rahulshettyacademy.com/locatorspractice/");
 		WebElement forgotPassword = driver.findElement(By.linkText("Forgot your password?"));

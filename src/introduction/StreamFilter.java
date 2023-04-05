@@ -13,21 +13,20 @@ public class StreamFilter {
 
 	public static void main(String[] args) {
 		System.setProperty("Webdriver.chrome.driver", "C:\\Users\\jairo\\Desktop\\WebDrivers\\chromedriver.exe");
-		WebDriver driver =new ChromeDriver(); 
-		
-		String url ="https://rahulshettyacademy.com/seleniumPractise/#/offers";
-		
+		WebDriver driver = new ChromeDriver();
+
+		String url = "https://rahulshettyacademy.com/seleniumPractise/#/offers";
+
 		driver.get(url);
-		
+
 		WebElement searchField = driver.findElement(By.cssSelector("#search-field"));
 		searchField.sendKeys("Rice");
 		List<WebElement> veggies = driver.findElements(By.xpath("//tr //td [1]"));
-		
-		List <WebElement> filteredList = veggies.stream().filter(veggie-> veggie.getText().contains("Rice")).collect(Collectors.toList());
-		
+
+		List<WebElement> filteredList = veggies.stream().filter(veggie -> veggie.getText().contains("Rice"))
+				.collect(Collectors.toList());
+
 		Assert.assertEquals(veggies, filteredList);
-		
-		
 
 	}
 

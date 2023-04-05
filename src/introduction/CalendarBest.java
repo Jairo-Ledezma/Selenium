@@ -93,43 +93,33 @@ public class CalendarBest {
 
 	}
 
-	/*public static void chooseReturnDate(WebDriver driver , String returningMonth  , int returningYear, int returningDay ) {
-		String desiredDay = String.valueOf(returningDay);
-		String desiredYear = String.valueOf(returningYear);
-		WebElement yearTag = driver.findElement(By.cssSelector(".sbox5-monthgrid-title-year"));
-		WebElement monthTag = driver.findElement(By.cssSelector(".sbox5-monthgrid-title-month"));
-		WebElement rightArrow = driver.findElement(By.cssSelector(".calendar-arrow-right"));
-		List <WebElement> days = driver.findElements(By.xpath("//div[@class = 'sbox5-monthgrid-datenumber-number']"));
-		
-		
-		while(!(yearTag.getText()).equalsIgnoreCase(desiredYear)) {
-			
-			if(yearTag.getText().equalsIgnoreCase(desiredYear)) {
-				break;
-			}else {
-				rightArrow.click();
-			}
-		}
-		
-		while(!(monthTag.getText()).equalsIgnoreCase(returningMonth)) {
-			if(monthTag.getText().equalsIgnoreCase(returningMonth)) {
-				break;
-			}else {
-				rightArrow.click();
-			}
-		}
-		
-		
-		
-		for (int i = 0; i<days.size(); i++) {
-			String current = days.get(i).getText();
-			if(current.equals(desiredDay)) {
-				days.get(i).click();
-				break;
-			}
-		}
-	}*/
-	
-	
+	/*
+	 * public static void chooseReturnDate(WebDriver driver , String returningMonth
+	 * , int returningYear, int returningDay ) { String desiredDay =
+	 * String.valueOf(returningDay); String desiredYear =
+	 * String.valueOf(returningYear); WebElement yearTag =
+	 * driver.findElement(By.cssSelector(".sbox5-monthgrid-title-year")); WebElement
+	 * monthTag =
+	 * driver.findElement(By.cssSelector(".sbox5-monthgrid-title-month"));
+	 * WebElement rightArrow =
+	 * driver.findElement(By.cssSelector(".calendar-arrow-right")); List
+	 * <WebElement> days = driver.findElements(By.
+	 * xpath("//div[@class = 'sbox5-monthgrid-datenumber-number']"));
+	 * 
+	 * 
+	 * while(!(yearTag.getText()).equalsIgnoreCase(desiredYear)) {
+	 * 
+	 * if(yearTag.getText().equalsIgnoreCase(desiredYear)) { break; }else {
+	 * rightArrow.click(); } }
+	 * 
+	 * while(!(monthTag.getText()).equalsIgnoreCase(returningMonth)) {
+	 * if(monthTag.getText().equalsIgnoreCase(returningMonth)) { break; }else {
+	 * rightArrow.click(); } }
+	 * 
+	 * 
+	 * 
+	 * for (int i = 0; i<days.size(); i++) { String current = days.get(i).getText();
+	 * if(current.equals(desiredDay)) { days.get(i).click(); break; } } }
+	 */
 
 }

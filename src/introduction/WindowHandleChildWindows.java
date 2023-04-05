@@ -13,21 +13,21 @@ public class WindowHandleChildWindows {
 	public static void main(String[] args) {
 		System.setProperty("Webdriver.chrome.driver", "C:\\Users\\jairo\\Desktop\\WebDrivers\\chromedirver.exe");
 		WebDriver driver = new ChromeDriver();
-		
+
 		String url = "https://rahulshettyacademy.com/loginpagePractise/#";
 		driver.get(url);
-		
+
 		WebElement pageLink = driver.findElement(By.cssSelector(".blinkingText"));
 		pageLink.click();
-		
-		Set <String> windows = driver.getWindowHandles(); // sets the windows id's on a set 
+
+		Set<String> windows = driver.getWindowHandles(); // sets the windows id's on a set
 		Iterator<String> it = windows.iterator(); // iterates trough the set of id's
 		String parentId = it.next(); // stores the parent id on a string;
-		String childId = it.next(); // stores the child id on a string 
-		driver.switchTo().window(childId); // switches control from parent to child 
+		String childId = it.next(); // stores the child id on a string
+		driver.switchTo().window(childId); // switches control from parent to child
 		WebElement textWithUserName = driver.findElement(By.cssSelector(".im-para.red"));
-		String userName = getUserName(driver,textWithUserName);
-		driver.switchTo().window(parentId); // switches control back to parent 
+		String userName = getUserName(driver, textWithUserName);
+		driver.switchTo().window(parentId); // switches control back to parent
 		WebElement userNameField = driver.findElement(By.cssSelector("#username"));
 		userNameField.sendKeys(userName);
 		String pwd = driver.findElement(By.cssSelector("div.form-group p b:nth-child(2) i")).getText();
@@ -35,10 +35,9 @@ public class WindowHandleChildWindows {
 		pwdField.sendKeys(pwd);
 		WebElement signInBtn = driver.findElement(By.cssSelector("#signInBtn"));
 		signInBtn.click();
-		
-		
+
 	}
-	
+
 	public static String getUserName(WebDriver driver, WebElement textWithUserName) {
 		String wholeText = textWithUserName.getText();
 		String[] brokenText = wholeText.split(" ");
